@@ -10,7 +10,7 @@ Our method help align the spatial structural information between source and targ
 
 ## Requirements
 
-**Note:** The base model is taken from [StyleGAN2](https://github.com/rosinality/stylegan2-pytorch)'s implementation from [@rosinality](https://github.com/rosinality)
+**Note:** The base model is taken from [Few-shot-gan-adaptation](https://github.com/WisconsinAIVision/few-shot-gan-adaptation)'s implementation from [@WisconsinAIVision](https://github.com/WisconsinAIVision)
 
 - Linux
 - NVIDIA GPU + CUDA CuDNN 10.2
