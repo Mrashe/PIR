@@ -32,7 +32,7 @@ This will save the images in the `test_samples/` directory.
 ## Training (adapting) your own GAN
 
 - Raw data should be organized as:
-- ```
+```
 ├── raw_data
 │   | <dataset_name> 
 │     ├── images
