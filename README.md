@@ -6,7 +6,7 @@ few shot image generation via style adaptation and content preservation
 Our method help align the spatial structural information between source and target GAN to assist adaption.
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  
-[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
+[![Python](https://img.shields.io/badge/python-3.7%2B-blue)](https://www.python.org/downloads/)
 
 ## Requirements
 
@@ -19,6 +19,8 @@ Our method help align the spatial structural information between source and targ
 
 ### Sample images from a model
 
+We provide the pre-trained models for different source and target GAN models. Download the model from [Here](https://drive.google.com/drive/folders/1v3Ge9uGqY294vFqcwqQIgznxgtrej6bm?usp=sharing).
+
 To generate images from a pre-trained GAN, run the following command:
 
 ```bash
@@ -28,6 +30,8 @@ CUDA_VISIBLE_DEVICES=0 python generate.py --ckpt_target /path/to/model/
 This will save the images in the `test_samples/` directory.
 
 ## Training (adapting) your own GAN
+
+- Run `python prepare_data.py --out processed_data/<dataset_name> --size 256 ./raw_data/<dataset_name>`. This will generate the processed version of the data in `./processed_data` directory. 
 
 - If you wish to use some other source model, make sure that it follows the generator architecture defined in this [pytorch implementation](https://github.com/rosinality/stylegan2-pytorch) of StyleGAN2, or you can modify the generator's architecture in `models.py` accordingly.
 
