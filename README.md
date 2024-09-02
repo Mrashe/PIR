@@ -19,7 +19,7 @@ Our method help align the spatial structural information between source and targ
 
 ### Sample images from a model
 
-We provide the pre-trained models for different source and target GAN models. Download the model from [Here](https://drive.google.com/drive/folders/1v3Ge9uGqY294vFqcwqQIgznxgtrej6bm?usp=sharing).
+We provide the pre-trained models for different source and target GAN models. Download the model from [Here](https://drive.google.com/drive/folders/1BE4AJHVg4cKUtG42dFniiSbzr4wm6GYr?usp=sharing).
 
 To generate images from a pre-trained GAN, run the following command:
 
