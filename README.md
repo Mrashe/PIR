@@ -13,7 +13,6 @@ Our method help align the spatial structural information between source and targ
 **Note:** The base model is taken from [Few-shot-gan-adaptation](https://github.com/WisconsinAIVision/few-shot-gan-adaptation)'s implementation from [@WisconsinAIVision](https://github.com/WisconsinAIVision)
 
 - Linux
-- NVIDIA GPU + CUDA CuDNN 10.2
-- PyTorch 1.7.0
-- Python 3.6.9
+- PyTorch 1.12.0
+- Python 3.8
 - Install all the libraries through `pip install -r requirements.txt` 
