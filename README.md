@@ -15,4 +15,29 @@ Our method help align the spatial structural information between source and targ
 - Linux
 - PyTorch 1.12.0
 - Python 3.8
-- Install all the libraries through `pip install -r requirements.txt` 
+- Install all the libraries through `pip install -r requirements.txt`
+
+### Sample images from a model
+
+To generate images from a pre-trained GAN, run the following command:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python generate.py --ckpt_target /path/to/model/
+```
+
+This will save the images in the `test_samples/` directory.
+
+## Training (adapting) your own GAN
+
+- If you wish to use some other source model, make sure that it follows the generator architecture defined in this [pytorch implementation](https://github.com/rosinality/stylegan2-pytorch) of StyleGAN2, or you can modify the generator's architecture in `models.py` accordingly.
+
+- Run the following command to adapt the source GAN (e.g. FFHQ) to the target domain (e.g. sketches):
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python train.py --ckpt /path/to/source_model --data_path /path/to/target_data --exp <exp_name>
+
+# sample run
+CUDA_VISIBLE_DEVICES=0 python train.py --ckpt ./checkpoints/source_ffhq.pt --data_path ./processed_data/sketches --exp ffhq_to_sketches    
+```
+This will create directories with name `ffhq_to_sketches` in `./checkpoints/` (saving the intermediate models) and in `./samples` (saving the intermediate generated images). 
+
