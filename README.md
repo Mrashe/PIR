@@ -31,6 +31,16 @@ This will save the images in the `test_samples/` directory.
 
 ## Training (adapting) your own GAN
 
+- Raw data should be organized as:
+- ```
+├── raw_data
+│   | <dataset_name> 
+│     ├── images
+│       ├── 000.png
+        ├── 001.png
+        ├── ...
+│    
+```
 - Run `python prepare_data.py --out processed_data/<dataset_name> --size 256 ./raw_data/<dataset_name>`. This will generate the processed version of the data in `./processed_data` directory. 
 
 - If you wish to use some other source model, make sure that it follows the generator architecture defined in this [pytorch implementation](https://github.com/rosinality/stylegan2-pytorch) of StyleGAN2, or you can modify the generator's architecture in `models.py` accordingly.
