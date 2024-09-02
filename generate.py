@@ -52,6 +52,8 @@ def generate_gif(args, g_list, device, mean_latent):
 
 
 def generate_imgs(args, g_list, device, mean_latent):
+    if not os.path.exists("test_sample"):
+        os.makedirs("test_sample")
 
     with torch.no_grad():
         for i in range(len(g_list)):
